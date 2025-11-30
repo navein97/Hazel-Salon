@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import makeupImg from '../assets/makeup.png';
 
 const services = [
   {
@@ -19,7 +18,7 @@ const services = [
   {
     title: "Makeup",
     description: "Professional makeup for all occasions",
-    image: makeupImg,
+    image: "https://images.unsplash.com/photo-1709477542149-f4e0e21d590b?auto=format&fit=crop&q=80&w=800",
     action: "Book Makeup"
   },
   {
