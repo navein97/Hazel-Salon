@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hazel-50: #fdf8f6;
+  --color-hazel-100: #f2e8e5;
+  --color-hazel-200: #eaddd7;
+  --color-hazel-300: #e0cec7;
+  --color-hazel-400: #d2bab0;
+  --color-hazel-500: #a08072;
+  --color-hazel-600: #8a6a5c;
+  --color-hazel-700: #725548;
+  --color-hazel-800: #5d453b;
+  --color-hazel-900: #4a372f;
+
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+  --color-rose-600: #e11d48;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  
+  --backdrop-blur-xs: 2px;
+}
+
+@layer base {
+  body {
+    @apply bg-hazel-50 text-gray-800 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  .glass-button {
+    @apply bg-hazel-500/90 text-white backdrop-blur-sm hover:bg-hazel-600 transition-all duration-300 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-hazel-300/50 rounded-full hover:bg-hazel-400/50;
+}
